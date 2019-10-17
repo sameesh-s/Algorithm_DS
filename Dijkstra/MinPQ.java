@@ -4,10 +4,12 @@ import java.util.NoSuchElementException;
 public class MinPQ<Key extends Comparable<Key>> {
 
 	private Key[] pq;
+	private Map<Integer, Integer> indexlist;
 	private int N = 0;
 	
 	public MinPQ(int maxN){
 		pq = (Key[]) new Comparable[maxN+1];
+		indexlist = new HashMap<Integer, Integer>(maxN);
 	}
 	
 	public boolean isEmpty(){
